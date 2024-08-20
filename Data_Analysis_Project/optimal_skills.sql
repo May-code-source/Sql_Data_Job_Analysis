@@ -1,13 +1,11 @@
 /*
-Answer: What are the most optimal skills to learn (aka it’s in high demand and a high-paying skill)?
+Problem: Retrieve the most optimal skills to learn, targeting skills that offer job security (high demand) and financial benefits (high salaries), 
+    offering strategic insights for career development in data analysis
 - Identify skills in high demand and associated with high average salaries for Data Analyst roles
 - Concentrates on remote positions with specified salaries
-- Why? Targets skills that offer job security (high demand) and financial benefits (high salaries), 
-    offering strategic insights for career development in data analysis
 */
 
--- Identifies skills in high demand for Data Analyst roles
--- Use Query #3
+-- Query to identify skills in high demand for Data Analyst roles
 WITH skills_demand AS (
     SELECT
         skills_dim.skill_id,
@@ -23,8 +21,7 @@ WITH skills_demand AS (
     GROUP BY
         skills_dim.skill_id
 ), 
--- Skills with high average salaries for Data Analyst roles
--- Use Query #4
+-- Query to identify skills with high average salaries for Data Analyst roles
 average_salary AS (
     SELECT 
         skills_job_dim.skill_id,
@@ -39,7 +36,7 @@ average_salary AS (
     GROUP BY
         skills_job_dim.skill_id
 )
--- Return high demand and high salaries for 10 skills 
+-- Returning high demand and high salaries for 10 skills 
 SELECT
     skills_demand.skill_id,
     skills_demand.skills,
@@ -55,7 +52,7 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 
--- rewriting this same query more concisely
+-- rewriting this same query more efficiently
 SELECT 
     skills_dim.skill_id,
     skills_dim.skills,
