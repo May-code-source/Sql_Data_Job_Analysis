@@ -1,6 +1,5 @@
 /*
-Problem: What are the top skills based on salary to reveal how different skills impact salary levels for Data Analysts and 
-    helps identify the most financially rewarding skills to acquire or improve
+Problem: What are the top skills based on salary to reveal how different skills impact salary levels for Data Analysts.
 - Looked at the average salary associated with each skill for Data Analyst positions
 - Focused on roles with specified salaries, regardless of location
 */
@@ -22,11 +21,7 @@ ORDER BY
 LIMIT 25;
 
 /*
-Here's a breakdown of the results for top paying skills for Data Analysts:
-- High Demand for Big Data & ML Skills: Top salaries are commanded by analysts skilled in big data technologies (PySpark, Couchbase), machine learning tools (DataRobot, Jupyter), and Python libraries (Pandas, NumPy), reflecting the industry's high valuation of data processing and predictive modeling capabilities.
-- Software Development & Deployment Proficiency: Knowledge in development and deployment tools (GitLab, Kubernetes, Airflow) indicates a lucrative crossover between data analysis and engineering, with a premium on skills that facilitate automation and efficient data pipeline management.
-- Cloud Computing Expertise: Familiarity with cloud and data engineering tools (Elasticsearch, Databricks, GCP) underscores the growing importance of cloud-based analytics environments, suggesting that cloud proficiency significantly boosts earning potential in data analytics.
-
+Result
 [
   {
     "skills": "pyspark",
